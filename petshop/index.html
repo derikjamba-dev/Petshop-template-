@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>PataVerde — Pet Shop</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+<body>
+
+  <!-- TOAST -->
+  <div id="toast" class="toast"></div>
+
+  <!-- NAVBAR -->
+  <header class="navbar" id="navbar">
+    <div class="nav-inner">
+      <a href="#" class="logo">
+        <span class="logo-icon">🐾</span>
+        <span>PataVerde</span>
+      </a>
+      <nav class="nav-links">
+        <a href="#produtos">Produtos</a>
+        <a href="#sobre">Sobre</a>
+        <a href="#contato">Contato</a>
+      </nav>
+      <div class="nav-actions">
+        <button class="btn-icon" id="searchBtn" title="Buscar">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.35-4.35"/></svg>
+        </button>
+        <button class="btn-icon cart-btn" id="cartBtn" title="Carrinho">
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+          <span class="cart-count" id="cartCount">0</span>
+        </button>
+        <button class="btn-outline" id="loginBtn">Entrar</button>
+        <button class="btn-primary" id="registerBtn">Cadastrar</button>
+      </div>
+      <button class="hamburger" id="hamburger">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+    <!-- Search Bar -->
+    <div class="search-bar" id="searchBar">
+      <input type="text" placeholder="Buscar produtos..." id="searchInput" />
+      <button id="searchClose">✕</button>
+    </div>
+  </header>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg"></div>
+    <div class="hero-content">
+      <p class="hero-eyebrow">Cuidado com amor 🌿</p>
+      <h1 class="hero-title">Tudo que seu<br /><em>pet merece</em></h1>
+      <p class="hero-sub">Alimentos premium, brinquedos e acessórios para cães, gatos e muito mais. Entrega rápida em Maputo.</p>
+      <div class="hero-actions">
+        <a href="#produtos" class="btn-primary btn-lg">Ver Produtos</a>
+        <a href="#sobre" class="btn-ghost btn-lg">Saiba mais</a>
+      </div>
+      <div class="hero-stats">
+        <div class="stat"><strong>500+</strong><span>Produtos</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>2k+</strong><span>Clientes</span></div>
+        <div class="stat-divider"></div>
+        <div class="stat"><strong>4.9★</strong><span>Avaliação</span></div>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="hero-circle"></div>
+      <div class="hero-pet-emoji">🐶</div>
+      <div class="floating-badge badge-1">🦴 Ração Premium</div>
+      <div class="floating-badge badge-2">💊 Vitaminas</div>
+      <div class="floating-badge badge-3">🛁 Banho & Tosa</div>
+    </div>
+  </section>
+
+  <!-- FEATURES -->
+  <section class="features">
+    <div class="container">
+      <div class="features-grid">
+        <div class="feature-card">
+          <div class="feature-icon">🚚</div>
+          <h3>Entrega Rápida</h3>
+          <p>Entregamos em todo Maputo em até 24h.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🩺</div>
+          <h3>Suporte Veterinário</h3>
+          <p>Tire dúvidas com nosso time de especialistas.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🌱</div>
+          <h3>Produtos Naturais</h3>
+          <p>Seleção de produtos orgânicos e sem conservantes.</p>
+        </div>
+        <div class="feature-card">
+          <div class="feature-icon">🔒</div>
+          <h3>Compra Segura</h3>
+          <p>Pagamento 100% seguro com múltiplas formas.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PRODUTOS -->
+  <section class="produtos" id="produtos">
+    <div class="container">
+      <div class="section-header">
+        <p class="section-eyebrow">Nossa loja</p>
+        <h2 class="section-title">Produtos em Destaque</h2>
+        <p class="section-sub">Escolhidos com cuidado para o bem-estar do seu pet.</p>
+      </div>
+
+      <div class="filter-tabs" id="filterTabs">
+        <button class="filter-btn active" data-filter="todos">Todos</button>
+        <button class="filter-btn" data-filter="caes">🐕 Cães</button>
+        <button class="filter-btn" data-filter="gatos">🐈 Gatos</button>
+        <button class="filter-btn" data-filter="aves">🦜 Aves</button>
+        <button class="filter-btn" data-filter="peixes">🐟 Peixes</button>
+        <button class="filter-btn" data-filter="acessorios">✨ Acessórios</button>
+      </div>
+
+      <div class="products-grid" id="productsGrid">
+        <!-- Products rendered by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- PROMO BANNER -->
+  <section class="promo-banner">
+    <div class="container">
+      <div class="promo-content">
+        <div>
+          <h2>Primeira compra com <span>15% OFF</span></h2>
+          <p>Use o código <strong>PATA15</strong> no checkout e aproveite!</p>
+        </div>
+        <button class="btn-primary btn-lg" id="promoShopBtn">Comprar agora</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="sobre-grid">
+        <div class="sobre-visual">
+          <div class="sobre-img-wrap">
+            <div class="sobre-img-placeholder">
+              <span>🐾</span>
+              <p>Desde 2018<br/>cuidando com amor</p>
+            </div>
+          </div>
+        </div>
+        <div class="sobre-text">
+          <p class="section-eyebrow">Nossa história</p>
+          <h2 class="section-title">Somos apaixonados<br />por animais</h2>
+          <p>A PataVerde nasceu da paixão de uma família por seus pets. Acreditamos que cada animal merece cuidado de qualidade, alimentos nutritivos e muito amor.</p>
+          <p>Com mais de 500 produtos selecionados, trabalhamos com as melhores marcas do mercado e oferecemos atendimento personalizado para cada necessidade.</p>
+          <div class="sobre-badges">
+            <span class="badge-pill">🏆 Melhor Pet Shop 2023</span>
+            <span class="badge-pill">✅ Certificado Veterinário</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEWSLETTER -->
+  <section class="newsletter" id="contato">
+    <div class="container">
+      <div class="newsletter-content">
+        <h2>Fique por dentro das novidades 🐾</h2>
+        <p>Receba promoções exclusivas e dicas de cuidados para o seu pet.</p>
+        <form class="newsletter-form" id="newsletterForm">
+          <input type="email" placeholder="seu@email.com" required />
+          <button type="submit" class="btn-primary">Inscrever-me</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <div class="logo"><span class="logo-icon">🐾</span><span>PataVerde</span></div>
+          <p>O melhor para o seu pet, com amor e cuidado.</p>
+          <div class="social-links">
+            <a href="#">📘</a><a href="#">📸</a><a href="#">🐦</a>
+          </div>
+        </div>
+        <div class="footer-col">
+          <h4>Produtos</h4>
+          <ul>
+            <li><a href="#">Ração & Alimentos</a></li>
+            <li><a href="#">Brinquedos</a></li>
+            <li><a href="#">Acessórios</a></li>
+            <li><a href="#">Higiene & Saúde</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Empresa</h4>
+          <ul>
+            <li><a href="#">Sobre nós</a></li>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Carreiras</a></li>
+            <li><a href="#">Parceiros</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h4>Contato</h4>
+          <ul>
+            <li>📍 Maputo, Moçambique</li>
+            <li>📞 +258 84 000 0000</li>
+            <li>✉️ ola@pataverde.co.mz</li>
+            <li>🕐 Seg-Sex: 8h–18h</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>© 2025 PataVerde Pet Shop. Todos os direitos reservados.</p>
+        <div class="footer-links">
+          <a href="#">Privacidade</a>
+          <a href="#">Termos</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- CART SIDEBAR -->
+  <div class="cart-overlay" id="cartOverlay"></div>
+  <aside class="cart-sidebar" id="cartSidebar">
+    <div class="cart-header">
+      <h3>Meu Carrinho 🛒</h3>
+      <button class="btn-icon" id="cartClose">✕</button>
+    </div>
+    <div class="cart-items" id="cartItems">
+      <div class="cart-empty">
+        <span>🛒</span>
+        <p>Seu carrinho está vazio</p>
+        <button class="btn-primary" onclick="closeCart()">Ver produtos</button>
+      </div>
+    </div>
+    <div class="cart-footer" id="cartFooter" style="display:none">
+      <div class="cart-subtotal">
+        <span>Subtotal:</span>
+        <strong id="cartTotal">MT 0,00</strong>
+      </div>
+      <div class="cart-coupon">
+        <input type="text" placeholder="Código de desconto" id="couponInput" />
+        <button class="btn-outline" id="applyCoupon">Aplicar</button>
+      </div>
+      <button class="btn-primary btn-block" id="checkoutBtn">Finalizar Compra</button>
+    </div>
+  </aside>
+
+  <!-- AUTH MODAL -->
+  <div class="modal-overlay" id="authOverlay">
+    <div class="modal" id="authModal">
+      <button class="modal-close" id="authClose">✕</button>
+      <div class="modal-tabs">
+        <button class="modal-tab active" data-tab="login">Entrar</button>
+        <button class="modal-tab" data-tab="register">Cadastrar</button>
+      </div>
+
+      <!-- Login -->
+      <div class="tab-content active" id="tab-login">
+        <div class="modal-header">
+          <h3>Bem-vindo de volta! 🐾</h3>
+          <p>Entre na sua conta para continuar.</p>
+        </div>
+        <form id="loginForm">
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>Senha</label>
+            <input type="password" name="password" placeholder="••••••••" required />
+          </div>
+          <button type="submit" class="btn-primary btn-block">Entrar</button>
+          <p class="form-footer">Não tem conta? <a href="#" data-switch="register">Cadastre-se</a></p>
+        </form>
+      </div>
+
+      <!-- Register -->
+      <div class="tab-content" id="tab-register">
+        <div class="modal-header">
+          <h3>Crie sua conta 🌿</h3>
+          <p>Rápido, fácil e gratuito.</p>
+        </div>
+        <form id="registerForm">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Nome</label>
+              <input type="text" name="nome" placeholder="Seu nome" required />
+            </div>
+            <div class="form-group">
+              <label>Sobrenome</label>
+              <input type="text" name="sobrenome" placeholder="Sobrenome" required />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>E-mail</label>
+            <input type="email" name="email" placeholder="seu@email.com" required />
+          </div>
+          <div class="form-group">
+            <label>Telefone</label>
+            <input type="tel" name="telefone" placeholder="+258 84 000 0000" />
+          </div>
+          <div class="form-group">
+            <label>Senha</label>
+            <input type="password" name="password" placeholder="Mínimo 8 caracteres" required minlength="8"/>
+          </div>
+          <div class="form-group">
+            <label>Confirmar Senha</label>
+            <input type="password" name="password_confirm" placeholder="Repita a senha" required />
+          </div>
+          <button type="submit" class="btn-primary btn-block">Criar Conta</button>
+          <p class="form-footer">Já tem conta? <a href="#" data-switch="login">Entrar</a></p>
+        </form>
+      </div>
+    </div>
+  </div>
+
+  <!-- CHECKOUT MODAL -->
+  <div class="modal-overlay" id="checkoutOverlay">
+    <div class="modal modal-wide" id="checkoutModal">
+      <button class="modal-close" id="checkoutClose">✕</button>
+      <div class="modal-header">
+        <h3>Finalizar Pedido 📦</h3>
+        <p>Preencha os dados de entrega.</p>
+      </div>
+      <form id="checkoutForm">
+        <div class="checkout-layout">
+          <div class="checkout-form">
+            <h4>Dados de Entrega</h4>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Nome completo</label>
+                <input type="text" name="nome" placeholder="Seu nome" required />
+              </div>
+              <div class="form-group">
+                <label>Telefone</label>
+                <input type="tel" name="telefone" placeholder="+258 84 000 0000" required />
+              </div>
+            </div>
+            <div class="form-group">
+              <label>Endereço</label>
+              <input type="text" name="endereco" placeholder="Rua, número, bairro" required />
+            </div>
+            <div class="form-row">
+              <div class="form-group">
+                <label>Cidade</label>
+                <input type="text" name="cidade" value="Maputo" required />
+              </div>
+              <div class="form-group">
+                <label>Referência</label>
+                <input type="text" name="referencia" placeholder="Ponto de referência" />
+              </div>
+            </div>
+            <h4>Forma de Pagamento</h4>
+            <div class="payment-methods">
+              <label class="payment-option">
+                <input type="radio" name="pagamento" value="mpesa" checked />
+                <span class="payment-card"><strong>M-Pesa</strong><small>Pagamento pelo telemóvel</small></span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="pagamento" value="emola" />
+                <span class="payment-card"><strong>e-Mola</strong><small>Pagamento digital</small></span>
+              </label>
+              <label class="payment-option">
+                <input type="radio" name="pagamento" value="dinheiro" />
+                <span class="payment-card"><strong>Dinheiro</strong><small>Pague na entrega</small></span>
+              </label>
+            </div>
+            <div class="form-group" id="mpesaField">
+              <label>Número M-Pesa</label>
+              <input type="tel" name="mpesa_num" placeholder="84 XXX XXXX" />
+            </div>
+          </div>
+          <div class="checkout-summary">
+            <h4>Resumo do Pedido</h4>
+            <div id="checkoutItems"></div>
+            <div class="summary-line">
+              <span>Subtotal</span><span id="summarySubtotal">MT 0,00</span>
+            </div>
+            <div class="summary-line" id="discountLine" style="display:none">
+              <span>Desconto</span><span id="summaryDiscount" class="discount-val">-MT 0,00</span>
+            </div>
+            <div class="summary-line">
+              <span>Entrega</span><span>MT 150,00</span>
+            </div>
+            <div class="summary-line total-line">
+              <strong>Total</strong><strong id="summaryTotal">MT 150,00</strong>
+            </div>
+            <button type="submit" class="btn-primary btn-block">Confirmar Pedido 🎉</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- ORDER SUCCESS MODAL -->
+  <div class="modal-overlay" id="successOverlay">
+    <div class="modal modal-sm" id="successModal">
+      <div class="success-content">
+        <div class="success-icon">🎉</div>
+        <h3>Pedido Confirmado!</h3>
+        <p>Seu pedido foi recebido com sucesso. Em breve entraremos em contato pelo seu número de telefone.</p>
+        <p class="order-number">Pedido #<span id="orderNumber">000</span></p>
+        <button class="btn-primary btn-block" id="successClose">Continuar comprando</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="modal-overlay" id="productOverlay">
+    <div class="modal modal-wide" id="productModal">
+      <button class="modal-close" id="productClose">✕</button>
+      <div class="product-detail" id="productDetail"></div>
+    </div>
+  </div>
+
+  <script src="assets/js/app.js"></script>
+</body>
+</html>
