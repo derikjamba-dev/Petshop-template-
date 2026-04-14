@@ -141,12 +141,16 @@ img { display: block; max-width: 100%; }
 
 /* === NAVBAR === */
 .navbar {
-  display: flex;
-  align-items: center;
-  gap: 32px;
-  padding: 16px 24px;
-  max-width: 1200px;
-  margin: 0 auto;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(253, 246, 236, 0.92);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+  transition: var(--transition);
 }
 .navbar.scrolled {
   box-shadow: var(--shadow-md);
