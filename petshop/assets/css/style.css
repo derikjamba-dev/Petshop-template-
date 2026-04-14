@@ -43,7 +43,7 @@ a { text-decoration: none; color: inherit; }
 ul { list-style: none; }
 img { display: block; max-width: 100%; }
 
-.hero-pet-emoji img{
+.hero-pet-emoji img {
   display: block; 
   max-width: 80%;
 }
