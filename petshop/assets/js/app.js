@@ -16,18 +16,18 @@ const state = {
 
 // === PRODUCTS DATA ===
 const PRODUCTS = [
-  { id:1,  nome:'Ração Premium Adulto Cão', categoria:'caes',      emoji:'🦴', preco:850,  precoAnterior:1000, desc:'Ração super premium com frango e arroz para cães adultos. Rico em proteínas e vitaminas.', badge:'Mais Vendido' },
-  { id:2,  nome:'Areia Sanitária Gatos 4kg', categoria:'gatos',    emoji:'🐈', preco:320,  precoAnterior:null, desc:'Areia sanitária aglomerante com controle de odor de longa duração. Ideal para todos os tipos de gatos.', badge:null },
-  { id:3,  nome:'Brinquedo Corda Interativo', categoria:'caes',    emoji:'🎾', preco:180,  precoAnterior:250,  desc:'Brinquedo de corda resistente para cães de médio e grande porte. Ideal para brincadeiras e dentição.', badge:'Oferta' },
-  { id:4,  nome:'Ração para Gatos Filhotes', categoria:'gatos',    emoji:'🐟', preco:490,  precoAnterior:null, desc:'Ração balanceada formulada para filhotes de gatos de até 12 meses. Com DHA para desenvolvimento cerebral.', badge:null },
-  { id:5,  nome:'Mistura para Canários 1kg',categoria:'aves',      emoji:'🦜', preco:145,  precoAnterior:null, desc:'Mix de sementes e grãos selecionados para canários, periquitos e outros pássaros tropicais.', badge:null },
-  { id:6,  nome:'Aquário Starter Kit 20L',  categoria:'peixes',    emoji:'🐠', preco:1200, precoAnterior:1500, desc:'Kit completo com aquário 20 litros, filtro, termômetro e decoração. Ideal para iniciantes.', badge:'Kit Completo' },
-  { id:7,  nome:'Coleira Ajustável Anti-Pulgas', categoria:'caes', emoji:'🪢', preco:220,  precoAnterior:null, desc:'Coleira impregnada com repelente natural contra pulgas, carrapatos e mosquitos. Duração: 8 meses.', badge:null },
-  { id:8,  nome:'Casa de Transporte Premium', categoria:'acessorios',emoji:'🏠',preco:750, precoAnterior:900,  desc:'Caixa de transporte rígida com ventilação superior e lateral. Aprovada por companhias aéreas. Tamanho M.', badge:'Destaque' },
-  { id:9,  nome:'Shampoo Neutro para Cães', categoria:'caes',      emoji:'🛁', preco:195,  precoAnterior:null, desc:'Shampoo pH neutro com extrato de Aloe Vera e Camomila. Hipoalergênico, indicado para peles sensíveis.', badge:null },
-  { id:10, nome:'Arranhador para Gatos',    categoria:'gatos',     emoji:'🏔️', preco:580,  precoAnterior:700,  desc:'Arranhador em sisal natural com plataforma superior para descanso. Altura: 60cm. Fretes incluso.', badge:'Novo' },
-  { id:11, nome:'Vitamina Complexo B para Cães', categoria:'caes', emoji:'💊', preco:290,  precoAnterior:null, desc:'Suplemento vitamínico completo para cães. Contribui para pele e pelagem saudáveis. 60 comprimidos.', badge:null },
-  { id:12, nome:'Aquecedor de Aquário 100W',categoria:'peixes',    emoji:'🌡️', preco:350,  precoAnterior:420,  desc:'Aquecedor submersível com termostato automático e proteção contra superaquecimento.', badge:null },
+  { id:1,  nome:'Ração Premium Adulto Cão', categoria:'caes',      icon:'bi-bag-heart-fill', img:'https://images.unsplash.com/photo-1589924691995-400dc9ecc119?w=400&q=80', preco:850,  precoAnterior:1000, desc:'Ração super premium com frango e arroz para cães adultos. Rico em proteínas e vitaminas.', badge:'Mais Vendido' },
+  { id:2,  nome:'Areia Sanitária Gatos 4kg', categoria:'gatos',    icon:'bi-stars',           img:'https://tb1663.vtexassets.com/arquivos/ids/161809/WhatsApp-Image-2022-11-22-at-16.51.21.jpg?v=638767017228700000', preco:320,  precoAnterior:null, desc:'Areia sanitária aglomerante com controle de odor de longa duração. Ideal para todos os tipos de gatos.', badge:null },
+  { id:3,  nome:'Brinquedo Corda Interativo', categoria:'caes',    icon:'bi-controller',      img:'https://m.media-amazon.com/images/I/61QunShO2VL.jpg', preco:180,  precoAnterior:250,  desc:'Brinquedo de corda resistente para cães de médio e grande porte. Ideal para brincadeiras e dentição.', badge:'Oferta' },
+  { id:4,  nome:'Ração para Gatos Filhotes', categoria:'gatos',    icon:'bi-box-seam-fill',   img:'https://tfchgi.vteximg.com.br/arquivos/ids/178019-1000-1000/3191.jpg?v=638591779687870000', preco:490,  precoAnterior:null, desc:'Ração balanceada formulada para filhotes de gatos de até 12 meses. Com DHA para desenvolvimento cerebral.', badge:null },
+  { id:5,  nome:'Mistura para Canários 1kg', categoria:'aves',     icon:'bi-egg-fill',        img:'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9SDAessHcU78_04hYaawm9KcIWgvwMafKxA&s', preco:145,  precoAnterior:null, desc:'Mix de sementes e grãos selecionados para canários, periquitos e outros pássaros tropicais.', badge:null },
+  { id:6,  nome:'Aquário Starter Kit 20L',   categoria:'peixes',   icon:'bi-droplet-half',    img:'https://gruposarlo.com.br/wp-content/uploads/2022/04/shutterstock_1135600916-1.jpg', preco:1200, precoAnterior:1500, desc:'Kit completo com aquário 20 litros, filtro, termômetro e decoração. Ideal para iniciantes.', badge:'Kit Completo' },
+  { id:7,  nome:'Coleira Ajustável Anti-Pulgas', categoria:'caes', icon:'bi-circle',          img:'https://images.tcdn.com.br/img/img_prod/963447/coleira_anti_pulga_kit_4_uni_carrapato_cachorro_gato_cao_pet_leishmaniose_felino_canino_protecao_tam_4343_1_4315480cef747880152042591a2f6a24.jpg', preco:220,  precoAnterior:null, desc:'Coleira impregnada com repelente natural contra pulgas, carrapatos e mosquitos. Duração: 8 meses.', badge:null },
+  { id:8,  nome:'Casa de Transporte Premium', categoria:'acessorios',icon:'bi-house-heart-fill',img:'https://brinqpet.com/wp-content/uploads/2023/09/0278-Caixa-de-Transporte-N1-Premium-Preto-com-Azul.jpg', preco:750, precoAnterior:900,  desc:'Caixa de transporte rígida com ventilação superior e lateral. Aprovada por companhias aéreas. Tamanho M.', badge:'Destaque' },
+  { id:9,  nome:'Shampoo Neutro para Cães', categoria:'caes',      icon:'bi-droplet-fill',    img:'https://images.tcdn.com.br/img/img_prod/573283/kit_de_banho_para_cachorro_e_gato_shampoo_e_condicionador_neutro_sanol_nutricao_e_maciez_da_pelagem__534938_3_9c260c8740799a42301843e5671a6e57_20251002182612.jpg', preco:195,  precoAnterior:null, desc:'Shampoo pH neutro com extrato de Aloe Vera e Camomila. Hipoalergênico, indicado para peles sensíveis.', badge:null },
+  { id:10, nome:'Arranhador para Gatos',    categoria:'gatos',     icon:'bi-layers-fill',     img:'https://agrobees.cdn.magazord.com.br/img/2024/03/produto/613/arranhador-p-gatos-poste-de-sisal-vertical-parede-binquedo-guepardo-agrobees.png?ims=fit-in/800x', preco:580,  precoAnterior:700,  desc:'Arranhador em sisal natural com plataforma superior para descanso. Altura: 60cm. Fretes incluso.', badge:'Novo' },
+  { id:11, nome:'Vitamina Complexo B para Cães', categoria:'caes', icon:'bi-capsule-pill',    img:'https://images.tcdn.com.br/img/img_prod/752354/bionew_complexo_de_vitaminas_b_vetnil_100ml_1783_1_20201117155653.jpg', preco:290,  precoAnterior:null, desc:'Suplemento vitamínico completo para cães. Contribui para pele e pelagem saudáveis. 60 comprimidos.', badge:null },
+  { id:12, nome:'Aquecedor de Aquário 100W',categoria:'peixes',    icon:'bi-thermometer-half', img:'https://m.media-amazon.com/images/I/61d5MxiM3OL.jpg', preco:350,  precoAnterior:420,  desc:'Aquecedor submersível com termostato automático e proteção contra superaquecimento.', badge:null },
 ];
 
 const COUPONS = {
@@ -72,7 +72,7 @@ function updateCartUI() {
   if (state.cart.length === 0) {
     cartItems.innerHTML = `
       <div class="cart-empty">
-        <span>🛒</span>
+        <span><i class="bi bi-cart-x" style="font-size:48px;color:#ccc"></i></span>
         <p>Seu carrinho está vazio</p>
         <button class="btn-primary" onclick="closeCart()">Ver produtos</button>
       </div>`;
@@ -87,7 +87,10 @@ function updateCartUI() {
 
   cartItems.innerHTML = state.cart.map(item => `
     <div class="cart-item" data-id="${item.id}">
-      <div class="cart-item-img">${item.emoji}</div>
+      <div class="cart-item-img">
+        <img src="${item.img}" alt="${item.nome}" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <span class="cart-item-icon-fallback" style="display:none"><i class="bi ${item.icon}"></i></span>
+      </div>
       <div class="cart-item-info">
         <div class="cart-item-name">${item.nome}</div>
         <div class="cart-item-price">${fmt(item.preco * item.qty)}</div>
@@ -97,7 +100,7 @@ function updateCartUI() {
           <button class="qty-btn" onclick="changeQty(${item.id}, 1)">+</button>
         </div>
       </div>
-      <button class="cart-item-remove" onclick="removeFromCart(${item.id})" title="Remover">🗑️</button>
+      <button class="cart-item-remove" onclick="removeFromCart(${item.id})" title="Remover"><i class="bi bi-trash3"></i></button>
     </div>
   `).join('');
 }
@@ -109,19 +112,19 @@ function addToCart(id) {
   if (existing) {
     existing.qty++;
   } else {
-    state.cart.push({ id: product.id, nome: product.nome, preco: product.preco, emoji: product.emoji, qty: 1 });
+    state.cart.push({ id: product.id, nome: product.nome, preco: product.preco, icon: product.icon, img: product.img, qty: 1 });
   }
   saveCart();
   updateCartUI();
-  showToast(`🛒 ${product.nome} adicionado ao carrinho!`);
+  showToast(`${product.nome} adicionado ao carrinho!`);
 
   // Animate button
   const btn = document.querySelector(`[data-add-id="${id}"]`);
   if (btn) {
-    btn.textContent = '✓ Adicionado';
+    btn.innerHTML = '<i class="bi bi-check-lg"></i> Adicionado';
     btn.style.background = 'var(--terra)';
     setTimeout(() => {
-      btn.textContent = 'Adicionar';
+      btn.innerHTML = 'Adicionar';
       btn.style.background = '';
     }, 1200);
   }
@@ -167,7 +170,7 @@ function renderProducts(filter = 'todos', query = '') {
 
   if (filtered.length === 0) {
     grid.innerHTML = `<div style="grid-column:1/-1;text-align:center;padding:60px 0;color:var(--text-muted)">
-      <div style="font-size:3rem;margin-bottom:12px">🔍</div>
+      <div style="font-size:3rem;margin-bottom:12px"><i class="bi bi-search" style="font-size:3rem;color:var(--verde)"></i></div>
       <p>Nenhum produto encontrado para "<strong>${query}</strong>"</p>
     </div>`;
     return;
@@ -177,8 +180,9 @@ function renderProducts(filter = 'todos', query = '') {
     <div class="product-card" style="animation-delay:${i * 0.05}s" onclick="openProductDetail(${p.id})">
       <div class="product-img">
         ${p.badge ? `<span class="product-badge">${p.badge}</span>` : ''}
-        <button class="product-fav" onclick="event.stopPropagation();toggleFav(${p.id},this)" title="Favoritar">🤍</button>
-        <span>${p.emoji}</span>
+        <button class="product-fav" data-fav="0" onclick="event.stopPropagation();toggleFav(${p.id},this)" title="Favoritar"><i class="bi bi-heart"></i></button>
+        <img src="${p.img}" alt="${p.nome}" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+        <span class="product-img-fallback" style="display:none"><i class="bi ${p.icon}"></i></span>
       </div>
       <div class="product-info">
         <div class="product-category">${categoryLabel(p.categoria)}</div>
@@ -200,14 +204,21 @@ function renderProducts(filter = 'todos', query = '') {
 }
 
 function categoryLabel(cat) {
-  const labels = { caes: '🐕 Cães', gatos: '🐈 Gatos', aves: '🦜 Aves', peixes: '🐟 Peixes', acessorios: '✨ Acessórios' };
+  const labels = {
+    caes: '<i class="bi bi-emoji-smile-fill"></i> Cães',
+    gatos: '<i class="bi bi-emoji-heart-eyes-fill"></i> Gatos',
+    aves: '<i class="bi bi-twitter"></i> Aves',
+    peixes: '<i class="bi bi-water"></i> Peixes',
+    acessorios: '<i class="bi bi-stars"></i> Acessórios'
+  };
   return labels[cat] || cat;
 }
 
 function toggleFav(id, btn) {
-  const isFav = btn.textContent === '❤️';
-  btn.textContent = isFav ? '🤍' : '❤️';
-  showToast(isFav ? 'Removido dos favoritos' : '❤️ Adicionado aos favoritos!');
+  const isFav = btn.dataset.fav === '1';
+  btn.dataset.fav = isFav ? '0' : '1';
+  btn.innerHTML = isFav ? '<i class="bi bi-heart"></i>' : '<i class="bi bi-heart-fill" style="color:#e05a6a"></i>';
+  showToast(isFav ? 'Removido dos favoritos' : 'Adicionado aos favoritos!');
 }
 
 // === PRODUCT DETAIL MODAL ===
@@ -215,7 +226,10 @@ function openProductDetail(id) {
   const p = PRODUCTS.find(pr => pr.id === id);
   if (!p) return;
   document.getElementById('productDetail').innerHTML = `
-    <div class="product-detail-img">${p.emoji}</div>
+    <div class="product-detail-img">
+      <img src="${p.img}" alt="${p.nome}" style="width:100%;height:100%;object-fit:cover;border-radius:16px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+      <span class="product-detail-icon-fallback" style="display:none;align-items:center;justify-content:center;height:100%;font-size:5rem;color:var(--verde)"><i class="bi ${p.icon}"></i></span>
+    </div>
     <div class="product-detail-info">
       <div class="product-category">${categoryLabel(p.categoria)}</div>
       <h2>${p.nome}</h2>
@@ -232,10 +246,10 @@ function openProductDetail(id) {
         <button class="qty-btn" onclick="document.getElementById('detailQty').stepUp()">+</button>
       </div>
       <button class="btn-primary btn-block" onclick="addMultipleToCart(${p.id})">
-        🛒 Adicionar ao Carrinho
+        <i class="bi bi-cart-plus-fill"></i> Adicionar ao Carrinho
       </button>
       ${p.precoAnterior ? `<p style="margin-top:12px;color:var(--terra);font-size:0.88rem;font-weight:600">
-        💰 Poupa ${fmt(p.precoAnterior - p.preco)} (${Math.round((1 - p.preco/p.precoAnterior)*100)}% desconto)
+        <i class="bi bi-piggy-bank-fill"></i> Poupa ${fmt(p.precoAnterior - p.preco)} (${Math.round((1 - p.preco/p.precoAnterior)*100)}% desconto)
       </p>` : ''}
     </div>
   `;
@@ -273,7 +287,7 @@ async function doLogin(email, password) {
       localStorage.setItem('pataverde_user', JSON.stringify(data.user));
       closeModal('authOverlay');
       updateAuthUI();
-      showToast(`👋 Bem-vindo, ${data.user.nome}!`);
+      showToast(`Bem-vindo, ${data.user.nome}!`);
     } else {
       showToast(data.message || 'Credenciais inválidas.', 'error');
     }
@@ -299,7 +313,7 @@ async function doRegister(formData) {
       localStorage.setItem('pataverde_user', JSON.stringify(data.user));
       closeModal('authOverlay');
       updateAuthUI();
-      showToast('🎉 Conta criada com sucesso! Bem-vindo(a)!');
+      showToast('Conta criada com sucesso! Bem-vindo(a)!');
     } else {
       showToast(data.message || 'Erro ao criar conta.', 'error');
     }
@@ -314,7 +328,7 @@ function demoLogin(email) {
   localStorage.setItem('pataverde_user', JSON.stringify(user));
   closeModal('authOverlay');
   updateAuthUI();
-  showToast(`👋 Bem-vindo, ${user.nome}! (modo demo)`);
+  showToast(`Bem-vindo, ${user.nome}! (modo demo)`);
 }
 
 function demoRegister(formData) {
@@ -323,7 +337,7 @@ function demoRegister(formData) {
   localStorage.setItem('pataverde_user', JSON.stringify(user));
   closeModal('authOverlay');
   updateAuthUI();
-  showToast('🎉 Conta criada! (modo demo)');
+  showToast('Conta criada! (modo demo)');
 }
 
 function logout() {
@@ -338,7 +352,7 @@ function updateAuthUI() {
   const loginBtn = document.getElementById('loginBtn');
   const registerBtn = document.getElementById('registerBtn');
   if (state.user) {
-    loginBtn.textContent = `👤 ${state.user.nome}`;
+    loginBtn.innerHTML = `<i class="bi bi-person-fill"></i> ${state.user.nome}`;
     loginBtn.onclick = logout;
     registerBtn.textContent = 'Sair';
     registerBtn.onclick = logout;
@@ -405,7 +419,7 @@ function applyCoupon(code) {
     state.discount = disc;
     state.coupon = code.toUpperCase();
     updateCartUI();
-    showToast(`🎉 Cupom aplicado! ${disc}% de desconto!`);
+    showToast(`Cupom aplicado! ${disc}% de desconto!`);
     return true;
   } else {
     showToast('Cupom inválido ou expirado.', 'error');
@@ -421,7 +435,7 @@ function fillCheckoutSummary() {
 
   items.innerHTML = state.cart.map(i => `
     <div class="checkout-item-row">
-      <span>${i.emoji}</span>
+      <span><i class="bi bi-box2-fill" style="color:var(--verde)"></i></span>
       <span>${i.nome} ×${i.qty}</span>
       <span>${fmt(i.preco * i.qty)}</span>
     </div>
@@ -527,7 +541,7 @@ document.addEventListener('DOMContentLoaded', () => {
     btn.textContent = 'Processando...';
     btn.disabled = true;
     await doCheckout(Object.fromEntries(fd));
-    btn.textContent = 'Confirmar Pedido 🎉';
+    btn.innerHTML = 'Confirmar Pedido <i class="bi bi-check-circle-fill"></i>';
     btn.disabled = false;
   });
 
@@ -591,7 +605,7 @@ document.addEventListener('DOMContentLoaded', () => {
   document.getElementById('promoShopBtn').addEventListener('click', () => {
     document.getElementById('couponInput').value = 'PATA15';
     document.getElementById('produtos').scrollIntoView({ behavior: 'smooth' });
-    showToast('🎁 Código PATA15 pronto para usar no carrinho!');
+    showToast('Código PATA15 pronto para usar no carrinho!');
   });
 
   // Newsletter
@@ -605,7 +619,7 @@ document.addEventListener('DOMContentLoaded', () => {
         body: JSON.stringify({ email }),
       });
     } catch {}
-    showToast('📧 Inscrito com sucesso! Obrigado!');
+    showToast('Inscrito com sucesso! Obrigado!');
     e.target.reset();
   });
 
